@@ -5,7 +5,8 @@ This is a repository with files generated during the research on the use of Spar
 [Introduction](#Introduction)  
 [Obtaining DataSets ](#Obtaining-DataSets)  
 [Related and Cleaning Datasets](#Related-and-Cleaning-Datasets)  
-[Mapping Datasets](#Mapping-Dattasets)  
+[Mapping Datasets](#Mapping-Datasets)  
+[Transforming to RDF ](#Transforming-to-RDF)
 ## Intoduction
 Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil as a case of study. The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
@@ -19,6 +20,9 @@ To store and consolidate data obtained in the previous step, we use a relational
 - Using Open refine we joined the tables: Area&Disciplines with Ranking2017 and obtained a project with the column names: "SourceID", "areaID", "area", "disciplineID", "discipline", "rank", "SJRQuartile".  
 ## Mapping Datasets
 For modeling the datasets into triples, we used the RDF extension from Open Refine. We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". With Spar Ontology was possible mapping the first one project but the second one we did not found class and propoertys for respresentation of area of study, discipline of area of study and quartile.  
+## Transforming to RDF
+Open Refine allows downloading a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
+![rdf extract](https://user-images.githubusercontent.com/43136359/47806276-a7081800-dd39-11e8-9269-58a259a2e11d.JPG)
 
 
 
