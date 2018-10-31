@@ -34,7 +34,10 @@ prefix fabio:<http://purl.org/spar/fabio/>
 prefix dcterms: <http://purl.org/dc/terms/>  
   
 SELECT DISTINCT ?y  
-WHERE{ ?x rdf:type ?y .  
-?x rdf:type fabio:Expression .   
+WHERE  
+{ ?x rdf:type ?y .  
+?x rdf:type fabio:Expression .  
+}  
+[Execute](https://bit.ly/2OZm40c)
 
 
