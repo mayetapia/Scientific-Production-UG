@@ -5,6 +5,6 @@ This is a repository with files generated during the research on the use of Spar
 [Introduction](#Introduction)  
 [Scripts to get datasets from Scopus](#Scripts-to-get-datasets-from-Scopus)  
 ## Intoduction
-Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network] (http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil as a case of study. The next figure explain the process carried out. 
+Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil as a case of study. The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 ## Scripts to get datasets from Scopus
