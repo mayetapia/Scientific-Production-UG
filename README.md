@@ -16,7 +16,5 @@ To store and consolidate data obtained in the previous step, we use a relational
 ![mer2](https://user-images.githubusercontent.com/43136359/47802796-5f7d8e00-dd31-11e8-9fd0-5fc2b5a5d51b.JPG)
 ## Mapping Datasets
 For modeling the datasets into triples, we used the RDF extension from Open Refine. We created two projects in Open Refine.  
-The first one relationed the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source with the following column names:  
-SourceID, paperID, authorID, affiliationID, documentType, aggregationType, paperTitle, datePaper, doi, url, issn, isbn, volume, issue,  pageRange, conferenceName, authorName, affililiationName, country,sourceName, publisher, country, sjr, journalHindex, authorHindex,  authorDocNumber, authorCitations, paperCitations, pubBegging, pubEnd.  
-The second one related the tables: Area&Disciplines with Ranking2017 with the following column names:  
-SourceID, areaID, area, disciplineID, discipline, rank, SJRQuartile.  
+- The first one relationed the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source with the following column names: SourceID, paperID, authorID, affiliationID, documentType, aggregationType, paperTitle, datePaper, doi, url, issn, isbn, volume, issue,  pageRange, conferenceName, authorName, affililiationName, country,sourceName, publisher, country, sjr, journalHindex, authorHindex,  authorDocNumber, authorCitations, paperCitations, pubBegging, pubEnd.  
+- The second one related the tables: Area&Disciplines with Ranking2017 with the following column names: SourceID, areaID, area, disciplineID, discipline, rank, SJRQuartile.  
