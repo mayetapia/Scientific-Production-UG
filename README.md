@@ -7,6 +7,8 @@ This is a repository with files generated during the research on the use of Spar
 [Related and Cleaning Datasets](#Related-and-Cleaning-Datasets)  
 [Mapping Datasets](#Mapping-Datasets)  
 [Transforming to RDF ](#Transforming-to-RDF)
+[Publishing RDF ](#Publishing-RDF)
+[Quering with SPARQL ](#Quering-with-SPARQL)
 ## Intoduction
 Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil as a case of study. The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
@@ -23,6 +25,10 @@ For modeling the datasets into triples, we used the RDF extension from Open Refi
 ## Transforming to RDF
 Open Refine allows downloading a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
 ![rdf extract](https://user-images.githubusercontent.com/43136359/47806467-2564ba00-dd3a-11e8-8fdb-655609c93f93.JPG)
-
+## Publishing RDF
+For publishing the RDF, we employed the triple database OpenLink Virtuoso. The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela.
+## Quering with SPARQL
+The competency questions and the query is presented in this section. You can click in the link to execute the query.
+![q1](https://user-images.githubusercontent.com/43136359/47807183-c1db8c00-dd3b-11e8-8bae-ce7e05c23f16.JPG)
 
 
