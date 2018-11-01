@@ -1,5 +1,5 @@
-# Scientific-Production-UG
-This is a repository with files generated during the research on the use of Spar Ontologies for Scientific Production: Case study [University of Guayaquil](http://www.ug.edu.ec).  
+# Scientific Production UG
+This is a repository with files generated during the research on the use of Spar Ontology Netowork for Scientific Production: Case study [University of Guayaquil](http://www.ug.edu.ec).  
 ![spar-ug](https://user-images.githubusercontent.com/43136359/47797390-86829280-dd26-11e8-874f-42f4c4fa83b6.JPG)  
 # Organization
 [Introduction](#Introduction)  
@@ -190,7 +190,4 @@ WHERE
 
 
 
-
-
-
-
+Iconos diseñados por [Smashicons] (https://www.flaticon.es/autores/smashicons) desde [www.flaticon.com](https://www.flaticon.es/) con licencia [Creative Commons BY 3.0] (http://creativecommons.org/licenses/by/3.0/)
