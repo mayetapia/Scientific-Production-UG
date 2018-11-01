@@ -6,9 +6,9 @@ This is a repository with files generated during the research on the use of Spar
 [Obtaining DataSets ](#Obtaining-DataSets)  
 [Related and Cleaning Datasets](#Related-and-Cleaning-Datasets)  
 [Mapping Datasets](#Mapping-Datasets)  
-[Transforming to RDF ](#Transforming-to-RDF)
-[Publishing RDF ](#Publishing-RDF)
-[Quering with SPARQL ](#Quering-with-SPARQL)
+[Transforming to RDF ](#Transforming-to-RDF)  
+[Publishing RDF ](#Publishing-RDF)  
+[Quering with SPARQL ](#Quering-with-SPARQL)  
 ## Intoduction
 Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil as a case of study. The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
