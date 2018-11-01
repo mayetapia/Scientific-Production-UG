@@ -1,0 +1,104 @@
+@prefix schema: <http://schema.org/> .
+@prefix tvc: <http://www.essepuntato.it/2012/04/tvc/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix frbr: <http://purl.org/vocab/frbr/core/> .
+@prefix fr: <http://purl.org/spar/fr/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix juso: <http://rdfs.co/juso/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix bido: <http://purl.org/spar/bido-core/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix prism: <http://prismstandard.org/namespaces/1.2/basic/> .
+
+
+<http://www.ug.edu.ec/spo/60072042> a foaf:Organization ;
+	dcterms:title "Universidad de Guayaquil" ;
+	schema:localization "Ecuador" ;
+	foaf:member <http://www.ug.edu.ec/spo/7202801165> .
+
+<http://www.ug.edu.ec/spo/7202801165> a foaf:Person ;
+	foaf:name "Hernández F." ;
+	tvc:atTime <http://www.ug.edu.ec/spo/7202801165-ProductionLife> ;
+	bido:holdsBibliometricDataInTime <http://www.ug.edu.ec/spo/7202801165-2017> ;
+	dcterms:creator <http://www.ug.edu.ec/spo/85005950245> .
+
+<http://www.ug.edu.ec/spo/7202801165-ProductionLife> a time:Interval ;
+	time:hasBeginning <http://www.ug.edu.ec/spo/1986-01-01> ;
+	time:hasEnd <http://www.ug.edu.ec/spo/2016-12-31> .
+
+<http://www.ug.edu.ec/spo/7202801165-2017> a bido:BibliometricDataInTime ;
+	tvc:atTime <http://www.ug.edu.ec/spo/2017> ;
+	bido:withBibliometricData <http://www.ug.edu.ec/spo/7202801165-2017-Hindex> , <http://www.ug.edu.ec/spo/7202801165-2017-DocNumber> , <http://www.ug.edu.ec/spo/7202801165-2017-Citations> .
+
+<http://www.ug.edu.ec/spo/2017> a time:Interval ;
+	time:hasBeginning <http://www.ug.edu.ec/spo/2017-01-01> ;
+	time:hasEnd <http://www.ug.edu.ec/spo/2017-12-31> .
+
+<http://www.ug.edu.ec/spo/7202801165-2017-Hindex> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://purl.org/spar/bido/h-index> ;
+	bido:hasNumericValue "10"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/7202801165-2017-DocNumber> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://ug.edu.ec/spo/author-num-documents> ;
+	bido:hasNumericValue "28"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/7202801165-2017-Citations> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://purl.org/spar/bido/author-citation-count> ;
+	bido:hasNumericValue "497"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/85005950245> a fabio:Expression ;
+	dcterms:title "To Genotype or Phenotype for Personalized Medicine? CYP450 Drug Metabolizing Enzyme Genotype-Phenotype Concordance and Discordance in the Ecuadorian Population" ;
+	bido:holdsBibliometricDataInTime <http://www.ug.edu.ec/spo/85005950245-2017> ;
+	juso:within <http://www.ug.edu.ec/spo/19001> ;
+	a fabio:Article .
+
+<http://www.ug.edu.ec/spo/85005950245-Bibliography> a fabio:BibliographicMetaData ;
+	prism:doi "10.1089/omi.2016.0148" ;
+	fabio:hasURL "https://api.elsevier.com/content/abstract/scopus_id/85005950245" ;
+	prism:issn "15578100" , "15362310" ;
+	prism:volume "20" ;
+	prism:issueIdentifier "12" ;
+	dcterms:issued "1/12/2016" ;
+	dcterms:publisher "Mary Ann Liebert Inc. info@liebertpub.com" ;
+	frbr:realization <http://www.ug.edu.ec/spo/85005950245> .
+
+<http://www.ug.edu.ec/spo/85005950245-2017> tvc:atTime <http://www.ug.edu.ec/spo/2017> ;
+	a bido:BibliometricDataInTime ;
+	bido:withBibliometricData <http://www.ug.edu.ec/spo/85005950245-2017-Citations> .
+
+<http://www.ug.edu.ec/spo/85005950245-2017-Citations> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://www.ug.edu.ec/spo/paper-citation-count> ;
+	bido:hasNumericValue "8"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/19001> a fr:ConveningOrganization ;
+	bido:holdsBibliometricDataInTime <http://www.ug.edu.ec/spo/19001-2017> ;
+	a fabio:Journal ;
+	dcterms:creator "OMICS A Journal of Integrative Biology" .
+
+<http://www.ug.edu.ec/spo/19001-2017> a bido:BibliometricDataInTime ;
+	tvc:atTime "7202801165-2017" ;
+	bido:withBibliometricData <http://www.ug.edu.ec/spo/19001-2017-Hindex> , <http://www.ug.edu.ec/spo/19001-2017-SJR> .
+
+<http://www.ug.edu.ec/spo/19001-2017-Hindex> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://purl.org/spar/bido/h-index> ;
+	bido:hasNumericValue "50"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/19001-2017-SJR> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://purl.org/spar/bido/journal-impact-factor> ;
+	bido:hasNumericValue "0.941"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/2017-01-01> a time:Instant ;
+	time:inXSDDate "2017-01-01"^^xsd:date .
+
+<http://www.ug.edu.ec/spo/2017-12-31> a time:Instant ;
+	time:inXSDDate "2017-12-31"^^xsd:date .
+
+<http://www.ug.edu.ec/spo/1986-01-01> time:inXSDDate "1986-01-01"^^xsd:date ;
+	a time:Instant .
+
+<http://www.ug.edu.ec/spo/2016-12-31> a time:Instant ;
+	time:inXSDDate "2016-12-31"^^xsd:date .

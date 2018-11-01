@@ -1,0 +1,30 @@
+@prefix ext: <http://extensionbido.org/spo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix pendiente: <http://pendiente.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix bido: <http://purl.org/spar/bido-core/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+
+<http://www.ug.edu.ec/spo/19001-2017-1300-1303> a ext:RankingData ;
+	ext:withAreaOfStudy <http://www.ug.edu.ec/spo/19001-2017-1300-1303-Area> ;
+	<http://www.ug.edu.ec/spo/withRankingData> <http://www.ug.edu.ec/spo/19001-2017-1300-1303-Ranking> ;
+	ext:holdsRankingData <http://www.ug.edu.ec/spo/19001> .
+
+<http://www.ug.edu.ec/spo/19001-2017-1300-1303-Area> a ext:AreaOfStudy ;
+	dcterms:title "Biochemistry, Genetics and Molecular Biology" ;
+	ext:hasAreaofStudyDiscipline <http://www.ug.edu.ec/spo/19001-2017-1300-1303-discipline> .
+
+<http://www.ug.edu.ec/spo/19001-2017-1300-1303-discipline> a ext:AreaOfStudyDiscipline ;
+	dcterms:title "Biochemistry" .
+
+<http://www.ug.edu.ec/spo/19001-2017-1300-1303-Ranking> a bido:NumericBibliometricData ;
+	bido:hasMeasure <http://www.ug.edu.ec/spo/SJR-Rank> ;
+	bido:hasNumericValue "175"^^xsd:int .
+
+<http://www.ug.edu.ec/spo/19001-2017> a bido:BibliometricDataInTime ;
+	ext:holdsRankingData <http://www.ug.edu.ec/spo/19001-2017-1300-1303> .
