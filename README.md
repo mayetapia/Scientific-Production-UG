@@ -38,5 +38,5 @@ WHERE
 { ?x rdf:type ?y .  
 ?x rdf:type fabio:Expression .  
 }  
-[![play](https://user-images.githubusercontent.com/43136359/47847107-86d46980-ddca-11e8-9fc8-d4ac725dfa6a.JPG)](https://bit.ly/2OZm40c){:target="_blank"}
+[![play](https://user-images.githubusercontent.com/43136359/47847107-86d46980-ddca-11e8-9fc8-d4ac725dfa6a.JPG)](https://bit.ly/2OZm40c target="_blank")
 
