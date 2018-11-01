@@ -39,6 +39,6 @@ WHERE
 ?x rdf:type fabio:Expression .  
 }  
 [Execute](https://bit.ly/2OZm40c)
-[![play](https://user-images.githubusercontent.com/43136359/47846795-6f48b100-ddc9-11e8-8586-e5822ef34f37.JPG)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47846795-6f48b100-ddc9-11e8-8586-e5822ef34f37.JPG =50x)](https://bit.ly/2OZm40c)
 
 
