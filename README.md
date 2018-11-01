@@ -39,5 +39,17 @@ WHERE
 ?x rdf:type fabio:Expression .  
 }  
 [![play](https://user-images.githubusercontent.com/43136359/47847107-86d46980-ddca-11e8-9fc8-d4ac725dfa6a.JPG)](https://bit.ly/2OZm40c)
-[My Github](https://github.com/cmatskas" target="_blank)
+
+### CQ1.    What other organizations was the publication made with? 
+prefix fabio:<http://purl.org/spar/fabio/>
+prefix dcterms: <http://purl.org/dc/terms/>
+
+SELECT DISTINCT ?x ?y  
+WHERE {  
+?x dcterms:title ?y .  
+?x rdf:type foaf:Organization .    
+FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}  
+}  
+ORDER BY ?y  
+[![play](https://user-images.githubusercontent.com/43136359/47847107-86d46980-ddca-11e8-9fc8-d4ac725dfa6a.JPG)]
 
