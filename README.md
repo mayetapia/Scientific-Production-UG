@@ -190,4 +190,4 @@ WHERE
 
 
 
-Iconos diseñados por [Smashicons] (https://www.flaticon.es/autores/smashicons) desde [www.flaticon.com](https://www.flaticon.es/) con licencia [Creative Commons BY 3.0] (http://creativecommons.org/licenses/by/3.0/)
+Iconos play diseñados por [Smashicons](https://www.flaticon.es/autores/smashicons) desde [www.flaticon.com](https://www.flaticon.es/) con licencia [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
