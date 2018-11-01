@@ -38,7 +38,7 @@ WHERE
 { ?x rdf:type ?y .  
 ?x rdf:type fabio:Expression .  
 }  
-[![play](https://user-images.githubusercontent.com/43136359/47848024-45918900-ddcd-11e8-9b73-d088c252d448.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848093-7ec9f900-ddcd-11e8-9e60-e52fee2a0411.png)](https://bit.ly/2OZm40c)
 
 ### CQ2.    What other organizations was the publication made with? 
 prefix fabio:<http://purl.org/spar/fabio/>  
@@ -51,5 +51,5 @@ WHERE {
 FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}  
 }  
 ORDER BY ?y  
-[![play](https://user-images.githubusercontent.com/43136359/47848024-45918900-ddcd-11e8-9b73-d088c252d448.png))](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848093-7ec9f900-ddcd-11e8-9e60-e52fee2a0411.png)](https://bit.ly/2OZm40c)
 
