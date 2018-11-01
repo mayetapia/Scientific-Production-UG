@@ -53,3 +53,144 @@ FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}
 ORDER BY ?y  
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
+### CQ3. What is the article's bibliographic metadata?
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+
+SELECT DISTINCT ?x ?y ?z  
+WHERE {  
+  ?x ?y ?z .  
+  ?x rdf:type fabio:BibliographicMetaData .  
+  {  
+    SELECT DISTINCT ?x  
+    WHERE {  
+      ?x frbr:realization ?y.  
+      ?y rdf:type fabio:Article.  
+       {   SELECT DISTINCT ?org  
+     WHERE  {  
+           ?org dcterms:title "Universidad de Guayaquil" .      }  
+       }     }     }    }  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+### CQ4. What is the conference paper’s bibliographic metadata?
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+
+SELECT DISTINCT ?x ?y ?z  
+WHERE {  
+  ?x ?y ?z .  
+  ?x rdf:type fabio:BibliographicMetaData .  
+  {  
+    SELECT DISTINCT ?x  
+    WHERE {  
+      ?x frbr:realization ?y.  
+      ?y rdf:type fabio:ConferencePaper .  
+       {   SELECT DISTINCT ?org  
+     WHERE   {  
+           ?org dcterms:title "Universidad de Guayaquil" .    }  
+       }    }    }    }  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+### CQ5. What is the book’s bibliographic metadata?
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+
+SELECT DISTINCT ?x ?y ?z  
+WHERE {  
+  ?x ?y ?z .  
+  ?x rdf:type fabio:BibliographicMetaData .  
+  {  
+    SELECT DISTINCT ?x  
+    WHERE {  
+      ?x frbr:realization ?y.  
+      ?y rdf:type fabio:BookChapter .  
+       {   SELECT DISTINCT ?org  
+     WHERE   {  
+           ?org dcterms:title "Universidad de Guayaquil" .    }  
+       }    }    }    }  
+ [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+ 
+ ### CQ6. How many books, articles and conference papers researches have published?
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+
+SELECT DISTINCT (COUNT(?x) AS ?Num)  ?y  
+WHERE  
+{
+?x rdf:type ?y .  
+?x rdf:type fabio:Expression .    
+}  
+GROUP BY ?y  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+ ### CQ7. How many citations a researcher’s publication has received?
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix bido: <http://purl.org/spar/bido-core/>  
+
+SELECT DISTINCT ?paper ?kind ?num  
+WHERE {  
+?paper rdf:type fabio:Expression;  
+       bido:holdsBibliometricDataInTime ?paperMeasure .  
+?paperMeasure bido:withBibliometricData ?paperNum .  
+?paperNum bido:hasMeasure ?kind ;  
+          bido:hasNumericValue ?num .                
+?org foaf:member ?author .  
+?org dcterms:title "Universidad de Guayaquil" .  
+?author foaf:name ?authorName .  
+}  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+### CQ8.   For how long a researcher has published?  
+prefix time: <http://www.w3.org/2006/time#>  
+prefix tvc: <http://www.essepuntato.it/2012/04/tvc/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+
+SELECT DISTINCT ?authorName  ?pubEnd ?dateBeginning ?dateEnd ?ProductionLife  
+WHERE  
+{  
+?author tvc:atTime ?authorPublicationLife .  
+?authorPublicationLife rdf:type time:Interval ;  
+                       time:hasBeginning ?pubBeginning ;  
+                       time:hasEnd ?pubEnd .  
+?pubBeginning time:inXSDDate ?dateBeginning .  
+?pubEnd time:inXSDDate ?dateEnd.  
+?org foaf:member ?author .  
+?org dcterms:title "Universidad de Guayaquil" .  
+?author foaf:name ?authorName.  
+bind( ?dateBeginning as ?start )  
+bind( ?dateEnd as ?end )  
+bind( year(?end)-year(?start) as ?ProductionLife)  
+}  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
+Not resolved  
+
+### CQ10.  What is the h-index, number of citations and number of publications of a re-searcher?  
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix bido: <http://purl.org/spar/bido-core/>  
+
+SELECT DISTINCT ?authorName ?kind ?num  
+WHERE  
+{  
+?author bido:holdsBibliometricDataInTime ?authorMeasure .  
+?authorMeasure bido:withBibliometricData ?authorNum .  
+?authorNum bido:hasMeasure ?kind ;  
+          bido:hasNumericValue ?num.               
+?org foaf:member ?author .  
+?org dcterms:title "Universidad de Guayaquil" .  
+?author foaf:name ?authorName .   
+}  
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+
+
+
+
+
+
+
