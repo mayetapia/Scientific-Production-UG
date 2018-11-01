@@ -30,6 +30,7 @@ For publishing the RDF, we employed the triple database OpenLink Virtuoso. The U
 ## Quering with SPARQL
 The competency questions and the query is presented in this section. You can click in the link to execute the query.  
 ### CQ1.   What kind of publication it is? 
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
   
@@ -38,9 +39,11 @@ WHERE
 { ?x rdf:type ?y .  
 ?x rdf:type fabio:Expression .  
 }  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ2.    What other organizations was the publication made with? 
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>
 
@@ -51,9 +54,11 @@ WHERE {
 FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}  
 }  
 ORDER BY ?y  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ3. What is the article's bibliographic metadata?
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
@@ -71,9 +76,11 @@ WHERE {
      WHERE  {  
            ?org dcterms:title "Universidad de Guayaquil" .      }  
        }     }     }    }  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ4. What is the conference paper’s bibliographic metadata?
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
@@ -91,9 +98,11 @@ WHERE {
      WHERE   {  
            ?org dcterms:title "Universidad de Guayaquil" .    }  
        }    }    }    }  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ5. What is the book’s bibliographic metadata?
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
@@ -111,9 +120,11 @@ WHERE {
      WHERE   {  
            ?org dcterms:title "Universidad de Guayaquil" .    }  
        }    }    }    }  
+ ```
  [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
  
  ### CQ6. How many books, articles and conference papers researches have published?
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 
@@ -123,10 +134,12 @@ WHERE
 ?x rdf:type ?y .  
 ?x rdf:type fabio:Expression .    
 }  
-GROUP BY ?y  
+GROUP BY ?y 
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
  ### CQ7. How many citations a researcher’s publication has received?
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix bido: <http://purl.org/spar/bido-core/>  
@@ -142,9 +155,11 @@ WHERE {
 ?org dcterms:title "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .  
 }  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ8.   For how long a researcher has published?  
+```
 prefix time: <http://www.w3.org/2006/time#>  
 prefix tvc: <http://www.essepuntato.it/2012/04/tvc/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
@@ -165,12 +180,16 @@ bind( ?dateBeginning as ?start )
 bind( ?dateEnd as ?end )  
 bind( year(?end)-year(?start) as ?ProductionLife)  
 }  
+```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 ### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
+```
 Not resolved  
+```
 
 ### CQ10.  What is the h-index, number of citations and number of publications of a re-searcher?  
+```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix bido: <http://purl.org/spar/bido-core/>  
@@ -187,7 +206,7 @@ WHERE
 ?author foaf:name ?authorName .   
 }  
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
-
+```
 
 
 Iconos play diseñados por [Smashicons](https://www.flaticon.es/autores/smashicons) desde [www.flaticon.com](https://www.flaticon.es/) con licencia [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
