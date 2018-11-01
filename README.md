@@ -8,8 +8,17 @@ This is a repository with files and information generated during the research on
 [Mapping Datasets](#Mapping-Datasets)  
 [Transforming to RDF ](#Transforming-to-RDF)  
 [Publishing RDF ](#Publishing-RDF)  
-[Quering with SPARQL](#Quering-with-SPARQL)  
-## Intoduction
+[Quering with SPARQL](#Quering-with-SPARQL) 
+
+# Organization
+- Files RDF: The complete RDF transformation 
+- Files Scopus CSV: The original datasets downloaded from Scopus and joined using MySQL.
+- Files TTL: An example in turtle format of a case-specific for an author, affiliation, paper, source, and ranking.
+- Files XLS: Files in Excel with all the columns necessaries to start the transformation to RDF in Open Refine.
+- Images: A complete graph with an particular example.
+
+
+## Introduction
 Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil and the year 2017 as a case of study. The datasets were obtained from Scopus API in October 2018. Finally, we proposed ten competency question which was resolved using SPARQL.The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 ## Obtaining DataSets 
