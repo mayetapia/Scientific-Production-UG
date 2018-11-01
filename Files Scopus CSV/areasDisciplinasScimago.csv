@@ -1,0 +1,312 @@
+idArea,"Area","Discipline",idDiscipline
+1100,"Agricultural and Biological Sciences","Agricultural and Biological Sciences (miscellaneous)",1101
+1100,"Agricultural and Biological Sciences","Agronomy and Crop Science",1102
+1100,"Agricultural and Biological Sciences","Animal Science and Zoology",1103
+1100,"Agricultural and Biological Sciences","Aquatic Science",1104
+1100,"Agricultural and Biological Sciences","Ecology, Evolution, Behavior and Systematics",1105
+1100,"Agricultural and Biological Sciences","Food Science",1106
+1100,"Agricultural and Biological Sciences","Forestry",1107
+1100,"Agricultural and Biological Sciences","Horticulture",1108
+1100,"Agricultural and Biological Sciences","Insect Science",1109
+1100,"Agricultural and Biological Sciences","Plant Science",1110
+1100,"Agricultural and Biological Sciences","Soil Science",1111
+1200,"Arts and Humanities","Arts and Humanities (miscellaneous)",1201
+1200,"Arts and Humanities","History",1202
+1200,"Arts and Humanities","Language and Linguistics",1203
+1200,"Arts and Humanities","Archeology (arts and humanities)",1204
+1200,"Arts and Humanities","Classics",1205
+1200,"Arts and Humanities","Conservation",1206
+1200,"Arts and Humanities","History and Philosophy of Science",1207
+1200,"Arts and Humanities","Literature and Literary Theory",1208
+1200,"Arts and Humanities","Museology",1209
+1200,"Arts and Humanities","Music",1210
+1200,"Arts and Humanities","Philosophy",1211
+1200,"Arts and Humanities","Religious Studies",1212
+1200,"Arts and Humanities","Visual Arts and Performing Arts",1213
+1300,"Biochemistry, Genetics and Molecular Biology","Biochemistry, Genetics and Molecular Biology (miscellaneous)",1301
+1300,"Biochemistry, Genetics and Molecular Biology","Ageing",1302
+1300,"Biochemistry, Genetics and Molecular Biology","Biochemistry",1303
+1300,"Biochemistry, Genetics and Molecular Biology","Biophysics",1304
+1300,"Biochemistry, Genetics and Molecular Biology","Biotechnology",1305
+1300,"Biochemistry, Genetics and Molecular Biology","Cancer Research",1306
+1300,"Biochemistry, Genetics and Molecular Biology","Cell Biology",1307
+1300,"Biochemistry, Genetics and Molecular Biology","Clinical Biochemistry",1308
+1300,"Biochemistry, Genetics and Molecular Biology","Developmental Biology",1309
+1300,"Biochemistry, Genetics and Molecular Biology","Endocrinology",1310
+1300,"Biochemistry, Genetics and Molecular Biology","Genetics",1311
+1300,"Biochemistry, Genetics and Molecular Biology","Molecular Biology",1312
+1300,"Biochemistry, Genetics and Molecular Biology","Molecular Medicine",1313
+1300,"Biochemistry, Genetics and Molecular Biology","Physiology",1314
+1300,"Biochemistry, Genetics and Molecular Biology","Structural Biology",1315
+1400,"Business, Management and Accounting","Business, Management and Accounting (miscellaneous)",1401
+1400,"Business, Management and Accounting","Accounting",1402
+1400,"Business, Management and Accounting","Business and International Management",1403
+1400,"Business, Management and Accounting","Management Information Systems",1404
+1400,"Business, Management and Accounting","Management of Technology and Innovation",1405
+1400,"Business, Management and Accounting","Marketing",1406
+1400,"Business, Management and Accounting","Organizational Behavior and Human Resource Management",1407
+1400,"Business, Management and Accounting","Strategy and Management",1408
+1400,"Business, Management and Accounting","Tourism, Leisure and Hospitality Management",1409
+1400,"Business, Management and Accounting","Industrial Relations",1410
+1500,"Chemical Engineering","Chemical Engineering (miscellaneous)",1501
+1500,"Chemical Engineering","Bioengineering",1502
+1500,"Chemical Engineering","Catalysis",1503
+1500,"Chemical Engineering","Chemical Health and Safety",1504
+1500,"Chemical Engineering","Colloid and Surface Chemistry",1505
+1500,"Chemical Engineering","Filtration and Separation",1506
+1500,"Chemical Engineering","Fluid Flow and Transfer Processes",1507
+1500,"Chemical Engineering","Process Chemistry and Technology",1508
+1600,"Chemistry","Chemistry (miscellaneous)",1601
+1600,"Chemistry","Analytical Chemistry",1602
+1600,"Chemistry","Electrochemistry",1603
+1600,"Chemistry","Inorganic Chemistry",1604
+1600,"Chemistry","Organic Chemistry",1605
+1600,"Chemistry","Physical and Theoretical Chemistry",1606
+1600,"Chemistry","Spectroscopy",1607
+1800,"Decision Sciences","Decision Sciences (miscellaneous)",1801
+1800,"Decision Sciences","Information Systems and Management",1802
+1800,"Decision Sciences","Management Science and Operations Research",1803
+1800,"Decision Sciences","Statistics, Probability and Uncertainty",1804
+3500,"Dentistry","Dentistry (miscellaneous)",3501
+3500,"Dentistry","Dental Assisting",3502
+3500,"Dentistry","Dental Hygiene",3503
+3500,"Dentistry","Oral Surgery",3504
+3500,"Dentistry","Orthodontics",3505
+3500,"Dentistry","Periodontics",3506
+1900,"Earth and Planetary Sciences","Earth and Planetary Sciences (miscellaneous)",1901
+1900,"Earth and Planetary Sciences","Atmospheric Science",1902
+1900,"Earth and Planetary Sciences","Computers in Earth Sciences",1903
+1900,"Earth and Planetary Sciences","Earth-Surface Processes",1904
+1900,"Earth and Planetary Sciences","Economic Geology",1905
+1900,"Earth and Planetary Sciences","Geochemistry and Petrology",1906
+1900,"Earth and Planetary Sciences","Geology",1907
+1900,"Earth and Planetary Sciences","Geophysics",1908
+1900,"Earth and Planetary Sciences","Geotechnical Engineering and Engineering Geology",1909
+1900,"Earth and Planetary Sciences","Oceanography",1910
+1900,"Earth and Planetary Sciences","Palaeontology",1911
+1900,"Earth and Planetary Sciences","Space and Planetary Science",1912
+1900,"Earth and Planetary Sciences","Stratigraphy",1913
+2000,"Economics, Econometrics and Finance","Economics, Econometrics and Finance (miscellaneous)",2001
+2000,"Economics, Econometrics and Finance","Economics and Econometrics",2002
+2000,"Economics, Econometrics and Finance","Finance",2003
+2100,"Energy","Energy (miscellaneous)",2101
+2100,"Energy","Energy Engineering and Power Technology",2102
+2100,"Energy","Fuel Technology",2103
+2100,"Energy","Nuclear Energy and Engineering",2104
+2100,"Energy","Renewable Energy, Sustainability and the Environment",2105
+2200,"Engineering","Engineering (miscellaneous)",2201
+2200,"Engineering","Aerospace Engineering",2202
+2200,"Engineering","Automotive Engineering",2203
+2200,"Engineering","Biomedical Engineering",2204
+2200,"Engineering","Civil and Structural Engineering",2205
+2200,"Engineering","Computational Mechanics",2206
+2200,"Engineering","Control and Systems Engineering",2207
+2200,"Engineering","Electrical and Electronic Engineering",2208
+2200,"Engineering","Industrial and Manufacturing Engineering",2209
+2200,"Engineering","Mechanical Engineering",2210
+2200,"Engineering","Mechanics of Materials",2211
+2200,"Engineering","Ocean Engineering",2212
+2200,"Engineering","Safety, Risk, Reliability and Quality",2213
+2200,"Engineering","Media Technology",2214
+2200,"Engineering","Building and Construction",2215
+2200,"Engineering","Architecture",2216
+2300,"Environmental Science","Environmental Science (miscellaneous)",2301
+2300,"Environmental Science","Ecological Modelling",2302
+2300,"Environmental Science","Ecology",2303
+2300,"Environmental Science","Environmental Chemistry",2304
+2300,"Environmental Science","Environmental Engineering",2305
+2300,"Environmental Science","Global and Planetary Change",2306
+2300,"Environmental Science","Health, Toxicology and Mutagenesis",2307
+2300,"Environmental Science","Management, Monitoring, Policy and Law",2308
+2300,"Environmental Science","Nature and Landscape Conservation",2309
+2300,"Environmental Science","Pollution",2310
+2300,"Environmental Science","Waste Management and Disposal",2311
+2300,"Environmental Science","Water Science and Technology",2312
+3600,"Health Professions","Health Professions (miscellaneous)",3601
+3600,"Health Professions","Chiropractics",3602
+3600,"Health Professions","Complementary and Manual Therapy",3603
+3600,"Health Professions","Emergency Medical Services",3604
+3600,"Health Professions","Health Information Management",3605
+3600,"Health Professions","Medical Assisting and Transcription",3606
+3600,"Health Professions","Medical Laboratory Technology",3607
+3600,"Health Professions","Medical Terminology",3608
+3600,"Health Professions","Occupational Therapy",3609
+3600,"Health Professions","Optometry",3610
+3600,"Health Professions","Pharmacy",3611
+3600,"Health Professions","Physical Therapy, Sports Therapy and Rehabilitation",3612
+3600,"Health Professions","Podiatry",3613
+3600,"Health Professions","Radiological and Ultrasound Technology",3614
+3600,"Health Professions","Respiratory Care",3615
+3600,"Health Professions","Speech and Hearing",3616
+3600,"Health Professions","Sports Science",3699
+2400,"Immunology and Microbiology","Immunology and Microbiology (miscellaneous)",2401
+2400,"Immunology and Microbiology","Applied Microbiology and Biotechnology",2402
+2400,"Immunology and Microbiology","Immunology",2403
+2400,"Immunology and Microbiology","Microbiology",2404
+2400,"Immunology and Microbiology","Parasitology",2405
+2400,"Immunology and Microbiology","Virology",2406
+2500,"Materials Science","Materials Science (miscellaneous)",2501
+2500,"Materials Science","Biomaterials",2502
+2500,"Materials Science","Ceramics and Composites",2503
+2500,"Materials Science","Electronic, Optical and Magnetic Materials",2504
+2500,"Materials Science","Materials Chemistry",2505
+2500,"Materials Science","Metals and Alloys",2506
+2500,"Materials Science","Polymers and Plastics",2507
+2500,"Materials Science","Surfaces, Coatings and Films",2508
+2500,"Materials Science","Nanoscience and Nanotechnology",2509
+2600,"Mathematics","Mathematics (miscellaneous)",2601
+2600,"Mathematics","Algebra and Number Theory",2602
+2600,"Mathematics","Analysis",2603
+2600,"Mathematics","Applied Mathematics",2604
+2600,"Mathematics","Computational Mathematics",2605
+2600,"Mathematics","Control and Optimization",2606
+2600,"Mathematics","Discrete Mathematics and Combinatorics",2607
+2600,"Mathematics","Geometry and Topology",2608
+2600,"Mathematics","Logic",2609
+2600,"Mathematics","Mathematical Physics",2610
+2600,"Mathematics","Modelling and Simulation",2611
+2600,"Mathematics","Numerical Analysis",2612
+2600,"Mathematics","Statistics and Probability",2613
+2600,"Mathematics","Theoretical Computer Science",2614
+2700,"Medicine","Anatomy",2702
+2700,"Medicine","Anesthesiology and Pain Medicine",2703
+2700,"Medicine","Biochemistry, medical",2704
+2700,"Medicine","Cardiology and Cardiovascular Medicine",2705
+2700,"Medicine","Critical Care and Intensive Care Medicine",2706
+2700,"Medicine","Complementary and Alternative Medicine",2707
+2700,"Medicine","Dermatology",2708
+2700,"Medicine","Drug Guides",2709
+2700,"Medicine","Embryology",2710
+2700,"Medicine","Emergency Medicine",2711
+2700,"Medicine","Endocrinology, Diabetes and Metabolism",2712
+2700,"Medicine","Epidemiology",2713
+2700,"Medicine","Family Practice",2714
+2700,"Medicine","Gastroenterology",2715
+2700,"Medicine","Genetics(clinical)",2716
+2700,"Medicine","Geriatrics and Gerontology",2717
+2700,"Medicine","Health Informatics",2718
+2700,"Medicine","Health Policy",2719
+2700,"Medicine","Hematology",2720
+1700,"Computer Science","Computer Science (miscellaneous)",1701
+1700,"Computer Science","Artificial Intelligence",1702
+1700,"Computer Science","Computational Theory and Mathematics",1703
+1700,"Computer Science","Computer Graphics and Computer-Aided Design",1704
+1700,"Computer Science","Computer Networks and Communications",1705
+1700,"Computer Science","Computer Science Applications",1706
+1700,"Computer Science","Computer Vision and Pattern Recognition",1707
+1700,"Computer Science","Hardware and Architecture",1708
+1700,"Computer Science","Human-Computer Interaction",1709
+1700,"Computer Science","Information Systems",1710
+1700,"Computer Science","Signal Processing",1711
+1700,"Computer Science","Software",1712
+2700,"Medicine","Medicine (miscellaneous)",2701
+2700,"Medicine","Hepatology",2721
+2700,"Medicine","Histology",2722
+2700,"Medicine","Immunology and Allergy",2723
+2700,"Medicine","Internal Medicine",2724
+2700,"Medicine","Infectious Diseases",2725
+2700,"Medicine","Microbiology (medical)",2726
+2700,"Medicine","Nephrology",2727
+2700,"Medicine","Clinical Neurology",2728
+2700,"Medicine","Obstetrics and Gynaecology",2729
+2700,"Medicine","Oncology",2730
+2700,"Medicine","Ophthalmology",2731
+2700,"Medicine","Orthopedics and Sports Medicine",2732
+2700,"Medicine","Otorhinolaryngology",2733
+2700,"Medicine","Pathology and Forensic Medicine",2734
+2700,"Medicine","Pediatrics, Perinatology, and Child Health",2735
+2700,"Medicine","Pharmacology (medical)",2736
+2700,"Medicine","Physiology (medical)",2737
+2700,"Medicine","Psychiatry and Mental Health",2738
+2700,"Medicine","Public Health, Environmental and Occupational Health",2739
+2700,"Medicine","Pulmonary and Respiratory Medicine",2740
+2700,"Medicine","Radiology Nuclear Medicine and imaging",2741
+2700,"Medicine","Rehabilitation",2742
+2700,"Medicine","Reproductive Medicine",2743
+2700,"Medicine","Reviews and References, Medical",2744
+2700,"Medicine","Rheumatology",2745
+2700,"Medicine","Surgery",2746
+2700,"Medicine","Transplantation",2747
+2700,"Medicine","Urology",2748
+2800,"Neuroscience","Neuroscience (miscellaneous)",2801
+2800,"Neuroscience","Behavioral Neuroscience",2802
+2800,"Neuroscience","Biological Psychiatry",2803
+2800,"Neuroscience","Cellular and Molecular Neuroscience",2804
+2800,"Neuroscience","Cognitive Neuroscience",2805
+2800,"Neuroscience","Developmental Neuroscience",2806
+2800,"Neuroscience","Endocrine and Autonomic Systems",2807
+2800,"Neuroscience","Neurology",2808
+2800,"Neuroscience","Sensory Systems",2809
+2900,"Nursing","Nursing (miscellaneous)",2901
+2900,"Nursing","Advanced and Specialised Nursing",2902
+2900,"Nursing","Assessment and Diagnosis",2903
+2900,"Nursing","Care Planning",2904
+2900,"Nursing","Community and Home Care",2905
+2900,"Nursing","Critical Care",2906
+2900,"Nursing","Emergency",2907
+2900,"Nursing","Fundamentals and Skills",2908
+2900,"Nursing","Gerontology",2909
+2900,"Nursing","Issues, Ethics and Legal Aspects",2910
+2900,"Nursing","Leadership and Management",2911
+2900,"Nursing","LPN and LVN",2912
+2900,"Nursing","Maternity and Midwifery",2913
+2900,"Nursing","Medical–Surgical",2914
+2900,"Nursing","Nurse Assisting",2915
+2900,"Nursing","Nutrition and Dietetics",2916
+2900,"Nursing","Oncology(nursing)",2917
+2900,"Nursing","Pathophysiology",2918
+2900,"Nursing","Pediatrics",2919
+2900,"Nursing","Pharmacology (nursing)",2920
+2900,"Nursing","Phychiatric Mental Health",2921
+2900,"Nursing","Research and Theory",2922
+2900,"Nursing","Review and Exam Preparation",2923
+3000,"Pharmacology, Toxicology and Pharmaceutics","Pharmacology, Toxicology and Pharmaceutics (miscellaneous)",3001
+3000,"Pharmacology, Toxicology and Pharmaceutics","Drug Discovery",3002
+3000,"Pharmacology, Toxicology and Pharmaceutics","Pharmaceutical Science",3003
+3000,"Pharmacology, Toxicology and Pharmaceutics","Pharmacology",3004
+3000,"Pharmacology, Toxicology and Pharmaceutics","Toxicology",3005
+3100,"Physics and Astronomy","Physics and Astronomy (miscellaneous)",3101
+3100,"Physics and Astronomy","Acoustics and Ultrasonics",3102
+3100,"Physics and Astronomy","Astronomy and Astrophysics",3103
+3100,"Physics and Astronomy","Condensed Matter Physics",3104
+3100,"Physics and Astronomy","Instrumentation",3105
+3100,"Physics and Astronomy","Nuclear and High Energy Physics",3106
+3100,"Physics and Astronomy","Atomic and Molecular Physics, and Optics",3107
+3100,"Physics and Astronomy","Radiation",3108
+3100,"Physics and Astronomy","Statistical and Nonlinear Physics",3109
+3100,"Physics and Astronomy","Surfaces and Interfaces",3110
+3200,"Psychology","Psychology (miscellaneous)",3201
+3200,"Psychology","Applied Psychology",3202
+3200,"Psychology","Clinical Psychology",3203
+3200,"Psychology","Developmental and Educational Psychology",3204
+3200,"Psychology","Experimental and Cognitive Psychology",3205
+3200,"Psychology","Neuropsychology and Physiological Psychology",3206
+3200,"Psychology","Social Psychology",3207
+3300,"Social Sciences","Social Sciences (miscellaneous)",3301
+3300,"Social Sciences","Archaeology",3302
+3300,"Social Sciences","Development",3303
+3300,"Social Sciences","Education",3304
+3300,"Social Sciences","Geography, Planning and Development",3305
+3300,"Social Sciences","Health(social science)",3306
+3300,"Social Sciences","Human Factors and Ergonomics",3307
+3300,"Social Sciences","Law",3308
+3300,"Social Sciences","Library and Information Sciences",3309
+3300,"Social Sciences","Linguistics and Language",3310
+3300,"Social Sciences","Safety Research",3311
+3300,"Social Sciences","Sociology and Political Science",3312
+3300,"Social Sciences","Transportation",3313
+3300,"Social Sciences","Anthropology",3314
+3300,"Social Sciences","Communication",3315
+3300,"Social Sciences","Cultural Studies",3316
+3300,"Social Sciences","Demography",3317
+3300,"Social Sciences","Gender Studies",3318
+3300,"Social Sciences","Life-span and Life-course Studies",3319
+3300,"Social Sciences","Political Science and International Relations",3320
+3300,"Social Sciences","Public Administration",3321
+3300,"Social Sciences","Urban Studies",3322
+3300,"Social Sciences","Social Work",3323
+3400,"Veterinary","General Veterinary",3401
+3400,"Veterinary","Equine",3402
+3400,"Veterinary","Food Animals",3403
+3400,"Veterinary","Small Animals",3404
+1000,"Multidisciplinary","Multidisciplinary",1000
