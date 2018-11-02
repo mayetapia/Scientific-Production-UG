@@ -169,13 +169,14 @@ GROUP BY ?y
 
  ### CQ7. How many citations a researcher’s publication has received?
 ```
-prefix fabio:<http://purl.org/spar/fabio/>  
-prefix dcterms: <http://purl.org/dc/terms/>  
-prefix bido: <http://purl.org/spar/bido-core/>  
-
-SELECT DISTINCT ?paper ?kind ?num  
+prefix fabio:<http://purl.org/spar/fabio/>    
+prefix dcterms: <http://purl.org/dc/terms/>     
+prefix bido: <http://purl.org/spar/bido-core/>    
+  
+SELECT DISTINCT ?num ?titlePaper    
 WHERE {  
 ?paper rdf:type fabio:Expression;  
+       dcterms:title ?titlePaper;  
        bido:holdsBibliometricDataInTime ?paperMeasure .  
 ?paperMeasure bido:withBibliometricData ?paperNum .  
 ?paperNum bido:hasMeasure ?kind ;  
@@ -183,6 +184,7 @@ WHERE {
 ?org foaf:member ?author .  
 ?org dcterms:title "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .  
+} 
 }  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
