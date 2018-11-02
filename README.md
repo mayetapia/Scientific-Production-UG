@@ -2,8 +2,8 @@
 This is a repository with files and information generated during the research on the use of Spar Ontology Network for Scientific Production: Case study [University of Guayaquil](http://www.ug.edu.ec).  
 ![spar-ug](https://user-images.githubusercontent.com/43136359/47797390-86829280-dd26-11e8-874f-42f4c4fa83b6.JPG)  
 # Information
-[Introduction](#Introduction)
-[Spar Ontology Network Brief](Spar-Ontology-Network-Brief)
+[Introduction](#Introduction)  
+[Spar Ontology Network Brief](#Spar-Ontology-Network-Brief)  
 [Obtaining DataSets ](#Obtaining-DataSets)  
 [Related and Cleaning Datasets](#Related-and-Cleaning-Datasets)  
 [Mapping Datasets](#Mapping-Datasets)  
