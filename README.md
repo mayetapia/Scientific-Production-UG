@@ -8,8 +8,17 @@ This is a repository with files and information generated during the research on
 [Mapping Datasets](#Mapping-Datasets)  
 [Transforming to RDF ](#Transforming-to-RDF)  
 [Publishing RDF ](#Publishing-RDF)  
-[Quering with SPARQL](#Quering-with-SPARQL)  
-## Intoduction
+[Quering with SPARQL](#Quering-with-SPARQL) 
+
+# Organization
+- Files RDF: The complete RDF transformation 
+- Files Scopus CSV: The original datasets downloaded from Scopus and joined using MySQL.
+- Files TTL: An example in turtle format of a case-specific for an author, affiliation, paper, source, and ranking.
+- Files XLS: Files in Excel with all the columns necessaries to start the transformation to RDF in Open Refine.
+- Images: A complete graph with an particular example.
+
+
+## Introduction
 Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil and the year 2017 as a case of study. The datasets were obtained from Scopus API in October 2018. Finally, we proposed ten competency question which was resolved using SPARQL.The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 ## Obtaining DataSets 
@@ -20,7 +29,7 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 - Using MySQL we joined the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source and Affiliations. The consolidate file has the follow column names: "paperId","authorid","Paper-Author","paperTitle","DocumentType","aggregationType","doi","url","ISSN1","ISSN2","ISBN","issue","volume","pageRange","coverDatePaper",year,"citationsPaper","ConferenceEdition","ConferenceName","CorrespondenceAddress","sourceID","sourceName","publisher","SJR","hindexJournal","authorName","affiliationID","nameAffiliation","country","docNumberAuthor","citationsAuthor","hindexAuthor","pubBeginning","pubEnd".
 - Using Open refine we joined the tables: Area&Disciplines with Ranking2017 and obtained a project with the column names: "SourceID", "areaID", "area", "disciplineID", "discipline", "rank", "SJRQuartile".  
 ## Mapping Datasets
-We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". For modeling the datasets into triples, we used the RDF extension from Open Refine. With Spar Ontology was possible mapping the first one project but the second one we did not found class and propoerties for respresentation of area of study, discipline of area of study and quartile.  
+We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". For modeling the datasets into triples, we used the RDF extension from Open Refine. With Spar Ontology was possible mapping the first one project but the second one we did not found class and properties for respresentation of area of study, discipline of area of study and quartile.  
 ## Transforming to RDF
 Open Refine allows exporting a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
 ![rdf extract](https://user-images.githubusercontent.com/43136359/47806467-2564ba00-dd3a-11e8-8fdb-655609c93f93.JPG)
@@ -208,5 +217,6 @@ WHERE
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
 
-
+[![DOI](https://zenodo.org/badge/155572685.svg)](https://zenodo.org/badge/latestdoi/155572685)  
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -   
 Iconos play diseñados por [Smashicons](https://www.flaticon.es/autores/smashicons) desde [www.flaticon.com](https://www.flaticon.es/) con licencia [Creative Commons BY 3.0](http://creativecommons.org/licenses/by/3.0/)
