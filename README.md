@@ -69,7 +69,7 @@ WHERE
 ?x rdf:type fabio:Expression .  
 }  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
 
 ### CQ2.    What other organizations was the publication made with? 
 ```
@@ -84,7 +84,7 @@ FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}
 }  
 ORDER BY ?y  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PyUruq)
 
 ### CQ3. What is the article's bibliographic metadata?
 ```
@@ -106,7 +106,7 @@ WHERE {
            ?org dcterms:title "Universidad de Guayaquil" .      }  
        }     }     }    }  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
 
 ### CQ4. What is the conference paper’s bibliographic metadata?
 ```
@@ -128,7 +128,7 @@ WHERE {
            ?org dcterms:title "Universidad de Guayaquil" .    }  
        }    }    }    }  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
 
 ### CQ5. What is the book’s bibliographic metadata?
 ```
@@ -150,7 +150,7 @@ WHERE {
            ?org dcterms:title "Universidad de Guayaquil" .    }  
        }    }    }    }  
  ```
- [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+ [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
  
  ### CQ6. How many books, articles and conference papers researches have published?
 ```
@@ -165,7 +165,7 @@ WHERE
 }  
 GROUP BY ?y 
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OijVYc)
 
  ### CQ7. How many citations a researcher’s publication has received?
 ```
@@ -187,7 +187,7 @@ WHERE {
 } 
 ORDER BY DESC(?num)
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P2B6lP)
 
 ### CQ8.   For how long a researcher has published?  
 ```
@@ -213,7 +213,7 @@ bind( year(?end)-year(?start) as ?ProductionLifeYears)
 }  
 ORDER BY DESC(?ProductionLifeYears)
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6hME3)
 
 ### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
 ```
@@ -239,7 +239,7 @@ WHERE
 }
 ORDER BY DESC(?num)
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OfWDlL)
 
 
 [![DOI](https://zenodo.org/badge/155572685.svg)](https://zenodo.org/badge/latestdoi/155572685)  
