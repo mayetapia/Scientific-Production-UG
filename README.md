@@ -19,7 +19,7 @@ Universities are institutions where the research is a crucial piece to measure t
 ![spar ontologies](https://user-images.githubusercontent.com/43136359/47915875-84ded900-dea4-11e8-9af9-ff1d253e451d.JPG)  
   
 ### Ontologies for describing bibliographic resources and their parts
-[FRBR-Aligned Bibliographic Ontology - FaBiO](http://purl.org/spar/fabio) records and publishes descriptions of textual publications that are published or potentially publishable (e.g., books, journals) and items of their content (e.g., articles, conference papers).  
+[FRBR-Aligned Bibliographic Ontology - FaBiO](http://purl.org/spar/fabio) records and publishes descriptions of textual publications that are published or potentially publishable (e.g., journals, conferences proceedings) and items of their content (e.g., articles, conference papers).  
 [Essential FRBR in OWL2 DL - FRBR-DL](http://purl.org/spar/frbr)  represents the basic concepts and relations described in the International Federation of Library Associations and Institutions (IFLA) report on the Functional Requirements for Bibliographic Records (FRBR).  
 [Document Components Ontology - DoCO](http://purl.org/spar/doco) provides a structured vocabulary of document components, both structural (e.g., paragraph, section, chapter) and rhetorical (e.g., introduction, discussion, reference list, figure, appendix).  
 [Discourse Elements Ontology - DEO](http://purl.org/spar/deo) provides a structured vocabulary for rhetorical elements within documents (e.g., Introduction, Discussion, Acknowledgements, Reference List, Figures, Appendix).  
