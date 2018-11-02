@@ -95,23 +95,23 @@ prefix frbr: <http://purl.org/vocab/frbr/core/>
 SELECT DISTINCT ?x ?y ?z  
 WHERE 
 {  
-	?x ?y ?z .  
-	?x rdf:type fabio:BibliographicMetaData .  
-	{  
-	  	SELECT DISTINCT ?x  
-	    WHERE 
-	    {  
-		    ?x frbr:realization ?y.  
-		    ?y rdf:type fabio:Article.  
-		    {   
-		       	SELECT DISTINCT ?org  
-		     	WHERE  
-		     	{  
-		           ?org dcterms:title "Universidad de Guayaquil" .      
-		        }  
-		    }     
+   ?x ?y ?z .  
+   ?x rdf:type fabio:BibliographicMetaData .  
+   {  
+       SELECT DISTINCT ?x  
+       WHERE 
+       {  
+	   ?x frbr:realization ?y.  
+	   ?y rdf:type fabio:Article.  
+	   {   
+	       SELECT DISTINCT ?org  
+	       WHERE  
+	       {  
+		   ?org dcterms:title "Universidad de Guayaquil" .      
+	       }  
 	    }     
-   }   
+	}     
+    }   
 }  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
@@ -125,23 +125,23 @@ prefix frbr: <http://purl.org/vocab/frbr/core/>
 SELECT DISTINCT ?x ?y ?z  
 WHERE 
 {  
-	?x ?y ?z .  
-	?x rdf:type fabio:BibliographicMetaData .  
-	{  
-	  	SELECT DISTINCT ?x  
-	    WHERE 
-	    {  
-		    ?x frbr:realization ?y.  
-		    ?y rdf:type fabio:ConferencePaper.  
-		    {   
-		       	SELECT DISTINCT ?org  
-		     	WHERE  
-		     	{  
-		           ?org dcterms:title "Universidad de Guayaquil" .      
-		        }  
-		    }     
+   ?x ?y ?z .  
+   ?x rdf:type fabio:BibliographicMetaData .  
+   {  
+       SELECT DISTINCT ?x  
+       WHERE 
+       {  
+	   ?x frbr:realization ?y.  
+	   ?y rdf:type fabio:ConferencePaper.  
+	   {   
+	       SELECT DISTINCT ?org  
+	       WHERE  
+	       {  
+		   ?org dcterms:title "Universidad de Guayaquil" .      
+	       }  
 	    }     
-   }   
+	}     
+    }   
 }  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
@@ -155,24 +155,24 @@ prefix frbr: <http://purl.org/vocab/frbr/core/>
 SELECT DISTINCT ?x ?y ?z  
 WHERE 
 {  
-	?x ?y ?z .  
-	?x rdf:type fabio:BibliographicMetaData .  
-	{  
-	  	SELECT DISTINCT ?x  
-	    WHERE 
-	    {  
-		    ?x frbr:realization ?y.  
-		    ?y rdf:type fabio:BookChapter.  
-		    {   
-		       	SELECT DISTINCT ?org  
-		     	WHERE  
-		     	{  
-		           ?org dcterms:title "Universidad de Guayaquil" .      
-		        }  
-		    }     
+   ?x ?y ?z .  
+   ?x rdf:type fabio:BibliographicMetaData .  
+   {  
+       SELECT DISTINCT ?x  
+       WHERE 
+       {  
+	   ?x frbr:realization ?y.  
+	   ?y rdf:type fabio:BookChapter.  
+	   {   
+	       SELECT DISTINCT ?org  
+	       WHERE  
+	       {  
+		   ?org dcterms:title "Universidad de Guayaquil" .      
+	       }  
 	    }     
-   }   
-}
+	}     
+    }   
+}  
  ```
  [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
  
