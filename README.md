@@ -55,7 +55,7 @@ We created two projects in Open Refine. We called the first one "Union" and the 
 Open Refine allows exporting a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
 ![rdf extract](https://user-images.githubusercontent.com/43136359/47806467-2564ba00-dd3a-11e8-8fdb-655609c93f93.JPG)
 ## Publishing RDF
-For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela.
+For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
 ## Quering with SPARQL
 The competency questions and the queries is presented in this section. You can click in the link to execute the query.  
 ### CQ1.   What kind of publication it is? 
@@ -93,18 +93,26 @@ prefix dcterms: <http://purl.org/dc/terms/>
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
 
 SELECT DISTINCT ?x ?y ?z  
-WHERE {  
-  ?x ?y ?z .  
-  ?x rdf:type fabio:BibliographicMetaData .  
-  {  
-    SELECT DISTINCT ?x  
-    WHERE {  
-      ?x frbr:realization ?y.  
-      ?y rdf:type fabio:Article.  
-       {   SELECT DISTINCT ?org  
-     WHERE  {  
-           ?org dcterms:title "Universidad de Guayaquil" .      }  
-       }     }     }    }  
+WHERE 
+{  
+	?x ?y ?z .  
+	?x rdf:type fabio:BibliographicMetaData .  
+	{  
+	  	SELECT DISTINCT ?x  
+	    WHERE 
+	    {  
+		    ?x frbr:realization ?y.  
+		    ?y rdf:type fabio:Article.  
+		    {   
+		       	SELECT DISTINCT ?org  
+		     	WHERE  
+		     	{  
+		           ?org dcterms:title "Universidad de Guayaquil" .      
+		        }  
+		    }     
+	    }     
+   }   
+}  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
 
@@ -115,18 +123,26 @@ prefix dcterms: <http://purl.org/dc/terms/>
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
 
 SELECT DISTINCT ?x ?y ?z  
-WHERE {  
-  ?x ?y ?z .  
-  ?x rdf:type fabio:BibliographicMetaData .  
-  {  
-    SELECT DISTINCT ?x  
-    WHERE {  
-      ?x frbr:realization ?y.  
-      ?y rdf:type fabio:ConferencePaper .  
-       {   SELECT DISTINCT ?org  
-     WHERE   {  
-           ?org dcterms:title "Universidad de Guayaquil" .    }  
-       }    }    }    }  
+WHERE 
+{  
+	?x ?y ?z .  
+	?x rdf:type fabio:BibliographicMetaData .  
+	{  
+	  	SELECT DISTINCT ?x  
+	    WHERE 
+	    {  
+		    ?x frbr:realization ?y.  
+		    ?y rdf:type fabio:ConferencePaper.  
+		    {   
+		       	SELECT DISTINCT ?org  
+		     	WHERE  
+		     	{  
+		           ?org dcterms:title "Universidad de Guayaquil" .      
+		        }  
+		    }     
+	    }     
+   }   
+}  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
 
@@ -137,18 +153,26 @@ prefix dcterms: <http://purl.org/dc/terms/>
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
 
 SELECT DISTINCT ?x ?y ?z  
-WHERE {  
-  ?x ?y ?z .  
-  ?x rdf:type fabio:BibliographicMetaData .  
-  {  
-    SELECT DISTINCT ?x  
-    WHERE {  
-      ?x frbr:realization ?y.  
-      ?y rdf:type fabio:BookChapter .  
-       {   SELECT DISTINCT ?org  
-     WHERE   {  
-           ?org dcterms:title "Universidad de Guayaquil" .    }  
-       }    }    }    }  
+WHERE 
+{  
+	?x ?y ?z .  
+	?x rdf:type fabio:BibliographicMetaData .  
+	{  
+	  	SELECT DISTINCT ?x  
+	    WHERE 
+	    {  
+		    ?x frbr:realization ?y.  
+		    ?y rdf:type fabio:BookChapter.  
+		    {   
+		       	SELECT DISTINCT ?org  
+		     	WHERE  
+		     	{  
+		           ?org dcterms:title "Universidad de Guayaquil" .      
+		        }  
+		    }     
+	    }     
+   }   
+}
  ```
  [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
  
