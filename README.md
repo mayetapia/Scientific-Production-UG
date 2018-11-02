@@ -57,7 +57,7 @@ Open Refine allows exporting a file in RDF/XML or RDF Turtle format. We chose th
 ## Publishing RDF
 For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
 ## Quering with SPARQL
-The competency questions and the queries is presented in this section. You can click in the link to execute the query.  
+The competency questions and the queries is presented in this section. You can click in the play button to execute the query.  
 ### CQ1.   What kind of publication it is? 
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
