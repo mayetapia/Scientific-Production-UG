@@ -46,6 +46,7 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 ![mer](https://user-images.githubusercontent.com/43136359/47912233-2f043400-de98-11e8-8644-d63585c45c1e.JPG)
 - Using MySQL we joined the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source and Affiliations. The consolidate file has the follow column names: "paperId","authorid","Paper-Author","paperTitle","DocumentType","aggregationType","doi","url","ISSN1","ISSN2","ISBN","issue","volume","pageRange","coverDatePaper",year,"citationsPaper","ConferenceEdition","ConferenceName","CorrespondenceAddress","sourceID","sourceName","publisher","SJR","hindexJournal","authorName","affiliationID","nameAffiliation","country","docNumberAuthor","citationsAuthor","hindexAuthor","pubBeginning","pubEnd".
 - Using Open refine we joined the tables: Area&Disciplines with Ranking2017 and obtained a project with the column names: "SourceID", "areaID", "area", "disciplineID", "discipline", "rank", "SJRQuartile".  
+--
 ![mysql](https://user-images.githubusercontent.com/43136359/47915641-c9b64000-dea3-11e8-820f-69af18459cb1.JPG)  
   
 ## Mapping Datasets
