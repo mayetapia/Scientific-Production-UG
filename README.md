@@ -185,7 +185,6 @@ WHERE {
 ?org dcterms:title "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .  
 } 
-}  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
