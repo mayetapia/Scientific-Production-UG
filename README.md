@@ -185,6 +185,7 @@ WHERE {
 ?org dcterms:title "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .  
 } 
+ORDER BY DESC(?num)
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
@@ -194,7 +195,7 @@ prefix time: <http://www.w3.org/2006/time#>
 prefix tvc: <http://www.essepuntato.it/2012/04/tvc/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 
-SELECT DISTINCT ?authorName  ?pubEnd ?dateBeginning ?dateEnd ?ProductionLife  
+SELECT DISTINCT ?authorName  ?pubEnd ?dateBeginning ?dateEnd ?ProductionLifeYears  
 WHERE  
 {  
 ?author tvc:atTime ?authorPublicationLife .  
@@ -208,8 +209,9 @@ WHERE
 ?author foaf:name ?authorName.  
 bind( ?dateBeginning as ?start )  
 bind( ?dateEnd as ?end )  
-bind( year(?end)-year(?start) as ?ProductionLife)  
+bind( year(?end)-year(?start) as ?ProductionLifeYears)  
 }  
+ORDER BY DESC(?ProductionLifeYears)
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
@@ -235,6 +237,7 @@ WHERE
 ?org dcterms:title "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .   
 }
+ORDER BY DESC(?num)
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OZm40c)
 
