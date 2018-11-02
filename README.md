@@ -16,6 +16,8 @@ Universities are institutions where the research is a crucial piece to measure t
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 
 ## Spar Ontology Network Brief
+![spar ontologies](https://user-images.githubusercontent.com/43136359/47915875-84ded900-dea4-11e8-9af9-ff1d253e451d.JPG)  
+  
 ### Ontologies for describing bibliographic resources and their parts
 [FRBR-Aligned Bibliographic Ontology - FaBiO](http://purl.org/spar/fabio) records and publishes descriptions of textual publications that are published or potentially publishable (e.g., books, journals) and items of their content (e.g., articles, conference papers).  
 [Essential FRBR in OWL2 DL - FRBR-DL](http://purl.org/spar/frbr)  represents the basic concepts and relations described in the International Federation of Library Associations and Institutions (IFLA) report on the Functional Requirements for Bibliographic Records (FRBR).  
@@ -45,6 +47,7 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 - Using MySQL we joined the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source and Affiliations. The consolidate file has the follow column names: "paperId","authorid","Paper-Author","paperTitle","DocumentType","aggregationType","doi","url","ISSN1","ISSN2","ISBN","issue","volume","pageRange","coverDatePaper",year,"citationsPaper","ConferenceEdition","ConferenceName","CorrespondenceAddress","sourceID","sourceName","publisher","SJR","hindexJournal","authorName","affiliationID","nameAffiliation","country","docNumberAuthor","citationsAuthor","hindexAuthor","pubBeginning","pubEnd".
 - Using Open refine we joined the tables: Area&Disciplines with Ranking2017 and obtained a project with the column names: "SourceID", "areaID", "area", "disciplineID", "discipline", "rank", "SJRQuartile".  
 ![mysql](https://user-images.githubusercontent.com/43136359/47915641-c9b64000-dea3-11e8-820f-69af18459cb1.JPG)  
+  
 ## Mapping Datasets
 We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". For modeling the datasets into triples, we used the RDF extension from Open Refine. With Spar Ontology was possible mapping the first one project but the second one we did not found class and properties for respresentation of area of study, discipline of area of study and quartile.  
 ## Transforming to RDF
