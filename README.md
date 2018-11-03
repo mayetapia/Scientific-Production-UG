@@ -120,19 +120,22 @@ WHERE
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
-prefix frbr: <http://purl.org/vocab/frbr/core/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/> 
+prefix juso: <http://rdfs.co/juso/> 
 
-SELECT DISTINCT ?x ?y ?z  
+SELECT DISTINCT ?x ?y ?z  ?source  ?conferenceName  
 WHERE 
 {  
    ?x ?y ?z .  
    ?x rdf:type fabio:BibliographicMetaData .  
    {  
-       SELECT DISTINCT ?x  
+       SELECT DISTINCT ?x ?source ?conferenceName  
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
 	   ?y rdf:type fabio:ConferencePaper.  
+           ?y juso:within ?source .  
+           ?source dcterms:title ?conferenceName . 
 	   {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
