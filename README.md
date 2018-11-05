@@ -183,14 +183,24 @@ WHERE
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
-
-SELECT DISTINCT (COUNT(?x) AS ?Num)  ?y  
-WHERE  
-{
-?x rdf:type ?y .  
-?x rdf:type fabio:Expression .    
+SELECT * WHERE  
+{  
+    {  
+        SELECT (COUNT(?x) AS ?Articles)   
+        WHERE{?x rdf:type fabio:Article .}  
+    }  
+    UNION  
+    {  
+        SELECT (COUNT(?x) AS ?Books)   
+        WHERE{?x rdf:type fabio:BookChapter .}  
+    }  
+    UNION  
+    {  
+        SELECT (COUNT(?x) AS ?Conferences)   
+        WHERE{?x rdf:type fabio:ConferencePaper .}  
+    }  
 }  
-GROUP BY ?y 
+
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OijVYc)
 
