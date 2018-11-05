@@ -78,9 +78,9 @@ prefix dcterms: <http://purl.org/dc/terms/>
 
 SELECT DISTINCT ?x ?y  
 WHERE {  
-?x dcterms:title ?y .  
+?x foaf:name ?y .  
 ?x rdf:type foaf:Organization .    
-FILTER NOT EXISTS {?x dcterms:title "Universidad de Guayaquil"}  
+FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}  
 }  
 ORDER BY ?y  
 ```
@@ -107,7 +107,7 @@ WHERE
 	       SELECT DISTINCT ?org  
 	       WHERE  
 	       {  
-		   ?org dcterms:title "Universidad de Guayaquil" .      
+		   ?org foaf:name "Universidad de Guayaquil" .      
 	       }  
 	    }     
 	}     
@@ -140,7 +140,7 @@ WHERE
 	       SELECT DISTINCT ?org  
 	       WHERE  
 	       {  
-		   ?org dcterms:title "Universidad de Guayaquil" .      
+		   ?org foaf:name "Universidad de Guayaquil" .      
 	       }  
 	    }     
 	}     
@@ -170,7 +170,7 @@ WHERE
 	       SELECT DISTINCT ?org  
 	       WHERE  
 	       {  
-		   ?org dcterms:title "Universidad de Guayaquil" .      
+		   ?org foaf:name "Universidad de Guayaquil" .      
 	       }  
 	    }     
 	}     
@@ -209,7 +209,7 @@ WHERE {
 ?paperNum bido:hasMeasure ?kind ;  
           bido:hasNumericValue ?num .                
 ?org foaf:member ?author .  
-?org dcterms:title "Universidad de Guayaquil" .  
+?org foaf:name "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .  
 } 
 ORDER BY DESC(?num)
@@ -232,7 +232,7 @@ WHERE
 ?pubBeginning time:inXSDDate ?dateBeginning .  
 ?pubEnd time:inXSDDate ?dateEnd.  
 ?org foaf:member ?author .  
-?org dcterms:title "Universidad de Guayaquil" .  
+?org foaf:name "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName.  
 bind( ?dateBeginning as ?start )  
 bind( ?dateEnd as ?end )  
@@ -261,7 +261,7 @@ WHERE
 ?authorNum bido:hasMeasure ?kind ;  
           bido:hasNumericValue ?num.               
 ?org foaf:member ?author .  
-?org dcterms:title "Universidad de Guayaquil" .  
+?org foaf:name "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .   
 }
 ```
