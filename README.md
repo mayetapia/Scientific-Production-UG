@@ -5,7 +5,7 @@ This is a repository with files and information generated during the research on
 [Introduction](#Introduction)  
 [Spar Ontology Network Brief](#Spar-Ontology-Network-Brief)  
 [Obtaining DataSets ](#Obtaining-DataSets)  
-[Related and Cleaning Datasets](#Related-and-Cleaning-Datasets)  
+[Relating and Cleaning Datasets](#Relating-and-Cleaning-Datasets)  
 [Mapping Datasets](#Mapping-Datasets)  
 [Transforming to RDF ](#Transforming-to-RDF)  
 [Publishing RDF ](#Publishing-RDF)  
@@ -41,7 +41,7 @@ Two further supplementary ontologies have been made available to classify all th
 [The Five Stars of Online Research Articles Ontology - FiveStars](http://purl.org/spar/fivestars) enables characterization of the five attributes of an online journal article - peer review, open access, enriched content, available datasets, and machine-readable metadata.  
 ## Obtaining DataSets 
 Scopus has an API with allow to obtain data of papers, authors, journals, rankings, etc. We developed some Phyton scripts for calling Scopus services to obtain data from the University of Guayaquil.
-## Related and Cleaning Datasets 
+## Relating and Cleaning Datasets 
 We use MySQL and Open Refine to store and consolidate the data obtained in the previous step. The next figure shows the primary and foreing key of the entities that we used.
 ![mer](https://user-images.githubusercontent.com/43136359/47912233-2f043400-de98-11e8-8644-d63585c45c1e.JPG)
 - Using MySQL we joined the tables: Papers, Papers-Authors, AuthorsUG, AuthorsNotUG, Source and Affiliations. The consolidate file has the follow column names: "paperId","authorid","Paper-Author","paperTitle","DocumentType","aggregationType","doi","url","ISSN1","ISSN2","ISBN","issue","volume","pageRange","coverDatePaper",year,"citationsPaper","ConferenceEdition","ConferenceName","CorrespondenceAddress","sourceID","sourceName","publisher","SJR","hindexJournal","authorName","affiliationID","nameAffiliation","country","docNumberAuthor","citationsAuthor","hindexAuthor","pubBeginning","pubEnd".
