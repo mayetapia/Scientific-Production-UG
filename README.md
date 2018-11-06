@@ -16,7 +16,7 @@ Universities are institutions where the research is a crucial piece to measure t
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 
 ## Spar Ontology Network Brief
-![spar ontologies](https://user-images.githubusercontent.com/43136359/48074933-4e75c680-e1e2-11e8-9c98-035bd161fe73.JPG)
+![spar ontologies](https://user-images.githubusercontent.com/43136359/48075146-d360e000-e1e2-11e8-81b7-e35b4593d894.jpeg)
   
 ### Ontologies for describing bibliographic resources and their parts
 [FRBR-Aligned Bibliographic Ontology - FaBiO](http://purl.org/spar/fabio) records and publishes descriptions of textual publications that are published or potentially publishable (e.g., journals, conferences proceedings) and items of their content (e.g., articles, conference papers).  
