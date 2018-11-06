@@ -53,12 +53,28 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". For modeling the datasets into triples, we used the RDF extension from Open Refine. With Spar Ontology was possible mapping the first one project but the second one we did not found class and properties for respresentation of area of study, discipline of area of study and quartile.  
 ## Transforming to RDF
 Open Refine allows exporting a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
-![rdf extract](https://user-images.githubusercontent.com/43136359/47806467-2564ba00-dd3a-11e8-8fdb-655609c93f93.JPG)
+![turtle](https://user-images.githubusercontent.com/43136359/48069005-955cbf80-e1d4-11e8-8c17-663def94ef76.JPG)
 ## Publishing RDF
 For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
 ## Quering with SPARQL
 The competency questions and the queries is presented in this section. You can click in the play button to execute the query.  
 ### CQ1.   What kind of publication it is? 
+```
+prefix fabio:<http://purl.org/spar/fabio/>  
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
+SELECT DISTINCT ?y  
+WHERE  
+{  
+?paper frbr:partOf ?source .  
+?paper rdf:type ?y .  
+?paper rdf:type fabio:Expression .   
+}  
+```
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
+
+### CQ2.    What other organizations was the publication made with? 
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
@@ -74,21 +90,6 @@ FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}
   { ?x owl:sameAs ?url . }  
 }   
 ORDER BY ?y   
-```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
-
-### CQ2.    What other organizations was the publication made with? 
-```
-prefix fabio:<http://purl.org/spar/fabio/>  
-prefix dcterms: <http://purl.org/dc/terms/>
-
-SELECT DISTINCT ?x ?y  
-WHERE {  
-?x foaf:name ?y .  
-?x rdf:type foaf:Organization .    
-FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}  
-}  
-ORDER BY ?y  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PyUruq)
 
@@ -140,7 +141,7 @@ WHERE
        {  
 	   ?x frbr:realization ?y.  
 	   ?y rdf:type fabio:ConferencePaper.  
-           ?y juso:within ?source .  
+           ?y frbr:partOf ?source .  
            ?source dcterms:title ?conferenceName . 
 	   {   
 	       SELECT DISTINCT ?org  
