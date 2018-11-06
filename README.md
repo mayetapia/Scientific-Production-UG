@@ -62,12 +62,18 @@ The competency questions and the queries is presented in this section. You can c
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
+prefix schema: <http://schema.org/>  
   
-SELECT DISTINCT ?y  
-WHERE  
-{ ?x rdf:type ?y .  
-?x rdf:type fabio:Expression .  
-}  
+SELECT DISTINCT ?x ?y ?url ?country  
+WHERE {  
+?x foaf:name ?y .  
+?x rdf:type foaf:Organization .   
+?x schema:location ?country  
+FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}  
+ OPTIONAL  
+  { ?x owl:sameAs ?url . }  
+}   
+ORDER BY ?y   
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
 
