@@ -1,5 +1,5 @@
 # Scientific Production with Spar Ontology Network
-This is a repository with files and information generated during the research on the use of Spar Ontology Network for Scientific Production: Case study [University of Guayaquil](http://www.ug.edu.ec).  
+This is a repository with files and information generated during the research on the use of Spar Ontology Network for Scientific Production: Case study [University of Guayaquil](http://www.ug.edu.ec) in 2017 year.  
 ![spar-ug](https://user-images.githubusercontent.com/43136359/47797390-86829280-dd26-11e8-874f-42f4c4fa83b6.JPG)  
 # Information
 [Introduction](#Introduction)  
@@ -12,7 +12,7 @@ This is a repository with files and information generated during the research on
 [Quering with SPARQL](#Quering-with-SPARQL) 
 
 ## Introduction
-Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used Spar Ontology Network in order to inquire whether it is possible to represent the scientific production of the universities as well. We selected the University of Guayaquil and the year 2017 as a case of study. The datasets were obtained from Scopus API in October 2018. Finally, we proposed ten competency question which was resolved using SPARQL.The next figure explain the process carried out. 
+Universities are institutions where the research is a crucial piece to measure their prestige; hence, the importance to evaluate their scientific production. The [SPAR Ontology Network](http://www.sparontologies.net/) is a complete project to describe the scholarly publishing domain. We used the SPAR Ontology Network in order to check whether it is possible to represent the scientific production of universities. We selected the University of Guayaquil and its Scopus production in 2017 as a case study. The datasets were obtained from Scopus API in October 2018. Finally, we proposed ten competency question which was resolved using SPARQL.The next figure explain the process carried out. 
 ![process](https://user-images.githubusercontent.com/43136359/47798492-c185c580-dd28-11e8-9f58-8fc3d759ef75.JPG)
 
 ## Spar Ontology Network Brief
@@ -40,7 +40,7 @@ Two further supplementary ontologies have been made available to classify all th
 [Bibliometric Data Ontology - BiDO](http://purl.org/spar/bido) allows the description of numerical and categorical bibliometric data concerning people, articles, journals, and other scholarly-related entities (e.g., journal impact factor, author h-index, categories describing research careers).  
 [The Five Stars of Online Research Articles Ontology - FiveStars](http://purl.org/spar/fivestars) enables characterization of the five attributes of an online journal article - peer review, open access, enriched content, available datasets, and machine-readable metadata.  
 ## Obtaining DataSets 
-Scopus has an API with allow to obtain data of papers, authors, journals, rankings, etc. We developed some Phyton scripts for calling Scopus services to obtain data from the University of Guayaquil.
+Scopus has an API with allow to obtain data of papers, authors, journals, rankings, etc. We developed some Python scripts for calling Scopus services to obtain data from the University of Guayaquil.
 ## Relating and Cleaning Datasets 
 We use MySQL and Open Refine to store and consolidate the data obtained in the previous step. The next figure shows the primary and foreing key of the entities that we used.
 ![mer](https://user-images.githubusercontent.com/43136359/47912233-2f043400-de98-11e8-8644-d63585c45c1e.JPG)
@@ -50,9 +50,10 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 ![mysql](https://user-images.githubusercontent.com/43136359/47915641-c9b64000-dea3-11e8-820f-69af18459cb1.JPG)  
   
 ## Mapping Datasets
-We created two projects in Open Refine. We called the first one "Union" and the second one "Ranking2017". For modeling the datasets into triples, we used the RDF extension from Open Refine. With Spar Ontology was possible mapping the first one project but the second one we did not found class and properties for respresentation of area of study, discipline of area of study and quartile.  
+For modeling the datasets into triples, we used the RDF extension from Open Refine. The RDF extension admits the reference of each component of the ontology to each column of data to be able to generate triplets. Some ontologies from the SPAR Ontology Network and other terms from well-known vocabularies were used to made the schema. 
+
 ## Transforming to RDF
-Open Refine allows exporting a file in RDF/XML or RDF Turtle format. We chose the last one as it is a format accessible to read for humans as it is showed in the next figure.  
+Once the mapping of the data finished, that is when the columns of the table were related to its corresponding ontology term creating a schema, we proceeded to export an RDF file.  
 ![turtle](https://user-images.githubusercontent.com/43136359/48069005-955cbf80-e1d4-11e8-8c17-663def94ef76.JPG)
 ## Publishing RDF
 For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
