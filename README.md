@@ -96,21 +96,22 @@ ORDER BY ?y
 
 ### CQ3. What is the article's bibliographic metadata?
 ```
-prefix fabio:<http://purl.org/spar/fabio/>  
+prefix fabio:<http://purl.org/spar/fabio/>   
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
-
-SELECT DISTINCT ?x ?y ?z  
+  
+SELECT DISTINCT  ?x ?y ?z ?title 
 WHERE 
 {  
    ?x ?y ?z .  
    ?x rdf:type fabio:BibliographicMetaData .  
    {  
-       SELECT DISTINCT ?x  
+       SELECT DISTINCT ?x  ?title  
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:Article.  
+	   ?y rdf:type fabio:Article. 
+           ?y dcterms:title ?title .
 	   {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
@@ -121,6 +122,7 @@ WHERE
 	}     
     }   
 }  
+ORDER BY ?title  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
 
@@ -128,22 +130,20 @@ WHERE
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
-prefix frbr: <http://purl.org/vocab/frbr/core/> 
-prefix juso: <http://rdfs.co/juso/> 
-
-SELECT DISTINCT ?x ?y ?z  ?source  ?conferenceName  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
+SELECT DISTINCT  ?x ?y ?z ?title 
 WHERE 
 {  
    ?x ?y ?z .  
    ?x rdf:type fabio:BibliographicMetaData .  
    {  
-       SELECT DISTINCT ?x ?source ?conferenceName  
+       SELECT DISTINCT ?x  ?title  
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:ConferencePaper.  
-           ?y frbr:partOf ?source .  
-           ?source dcterms:title ?conferenceName . 
+	   ?y rdf:type fabio:ConferencePaper. 
+           ?y dcterms:title ?title .  
 	   {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
@@ -154,6 +154,7 @@ WHERE
 	}     
     }   
 }  
+ORDER BY ?title  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
 
@@ -162,18 +163,19 @@ WHERE
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
-
-SELECT DISTINCT ?x ?y ?z  
+  
+SELECT DISTINCT  ?x ?y ?z ?title 
 WHERE 
 {  
    ?x ?y ?z .  
    ?x rdf:type fabio:BibliographicMetaData .  
    {  
-       SELECT DISTINCT ?x  
+       SELECT DISTINCT ?x  ?title  
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:BookChapter.  
+	   ?y rdf:type fabio:BookChapter. 
+           ?y dcterms:title ?title .  
 	   {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
@@ -184,6 +186,7 @@ WHERE
 	}     
     }   
 }  
+ORDER BY ?title  
  ```
  [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
  
@@ -282,6 +285,7 @@ WHERE
 ?org foaf:name "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .   
 }
+ORDER BY ?authorName  
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2qwsKUB)
 
