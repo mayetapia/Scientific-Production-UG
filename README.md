@@ -89,7 +89,7 @@ WHERE
 ?paper rdf:type fabio:Expression .   
 }  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2zUFw3z)
 
 ### CQ2.    What other organizations was the publication made with? 
 ```
@@ -108,10 +108,14 @@ FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}
 }   
 ORDER BY ?y   
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PyUruq)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OLQZYE)
 
 ### CQ3. What is the article's bibliographic metadata?
 ```
+prefix fabio:<http://purl.org/spar/fabio/>   
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
 SELECT DISTINCT  ?x ?y ?z 
 WHERE 
 {  
@@ -136,10 +140,14 @@ WHERE
 ORDER BY ?x 
  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2qPkz6g)
 
 ### CQ4. What is the conference paper’s bibliographic metadata?
 ```
+prefix fabio:<http://purl.org/spar/fabio/>   
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
 SELECT DISTINCT  ?x ?y ?z 
 WHERE 
 {  
@@ -164,10 +172,14 @@ WHERE
 ORDER BY ?x 
 
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2DDefHv)
 
 ### CQ5. What is the book’s bibliographic metadata?
 ```
+prefix fabio:<http://purl.org/spar/fabio/>   
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
 SELECT DISTINCT  ?x ?y ?z 
 WHERE 
 {  
@@ -192,7 +204,7 @@ WHERE
 ORDER BY ?x 
 
  ```
- [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
+ [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2TfSWjB)
  
  ### CQ6. How many books, articles and conference papers researches have published?
 ```
@@ -217,7 +229,7 @@ SELECT * WHERE
 }  
 
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OijVYc)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2DFzUi2)
 
  ### CQ7. How many citations a researcher’s publication has received?
 ```
@@ -237,7 +249,7 @@ WHERE {
 }   
 ORDER BY DESC(?valueCitations)  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P2B6lP)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2FlAlj5)
 
 ### CQ8.   For how long a researcher has published?  
 ```
@@ -263,7 +275,7 @@ bind( year(?end)-year(?start) as ?ProductionLifeYears)
 }  
 ORDER BY ?authorName
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6hME3)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Dn6Db0)
 
 ### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
 ```
@@ -289,7 +301,7 @@ WHERE
 }
 ORDER BY ?authorName  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2qwsKUB)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PWXnkC)
 
 
 [![DOI](https://zenodo.org/badge/155572685.svg)](https://zenodo.org/badge/latestdoi/155572685)  
