@@ -72,7 +72,7 @@ Once the mapping of the data finished, that is when the columns of the table wer
 	time:hasEnd <http://spar.linkeddata.es/2016-12-31> .  
 ```
 ## Publishing RDF
-For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
+For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://spar.linkeddata.es/sparql, and the graph URI is http://spar.linkeddata.es/graph/ug.
 ## Quering with SPARQL
 The competency questions and the queries is presented in this section. You can click in the play button to execute the query.  
 ### CQ1.   What kind of publication it is? 
