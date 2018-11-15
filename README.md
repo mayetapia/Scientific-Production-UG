@@ -53,10 +53,26 @@ We use MySQL and Open Refine to store and consolidate the data obtained in the p
 For modeling the datasets into triples, we used the RDF extension from Open Refine. The RDF extension admits the reference of each component of the ontology to each column of data to be able to generate triplets. Some ontologies from the SPAR Ontology Network and other terms from well-known vocabularies were used to made the schema. 
 
 ## Transforming to RDF
-Once the mapping of the data finished, that is when the columns of the table were related to its corresponding ontology term creating a schema, we proceeded to export an RDF file.  
-![turtle](https://user-images.githubusercontent.com/43136359/48069005-955cbf80-e1d4-11e8-8c17-663def94ef76.JPG)
+Once the mapping of the data finished, that is when the columns of the table were related to its corresponding ontology term creating a schema, we proceeded to export an RDF file. 
+```
+<http://spar.linkeddata.es/60072042> a foaf:Organization ;  
+	foaf:name "Universidad de Guayaquil" ;  
+	schema:location "Ecuador" ;  
+	foaf:member <http://spar.linkeddata.es/7202801165> ;  
+	owl:sameAs "https://www.wikidata.org/wiki/Q7895474" .  
+  
+<http://spar.linkeddata.es/7202801165> a foaf:Person ;  
+	foaf:name "Hernández F." ;  
+	tvc:atTime <http://spar.linkeddata.es/7202801165-ProductionLife> ;  
+	bido:holdsBibliometricDataInTime <http://spar.linkeddata.es/7202801165-2017> ;  
+	dcterms:creator <http://spar.linkeddata.es/85005950245> .  
+    
+<http://spar.linkeddata.es/7202801165-ProductionLife> a time:Interval ;  
+	time:hasBeginning <http://spar.linkeddata.es/1986-01-01> ;  
+	time:hasEnd <http://spar.linkeddata.es/2016-12-31> .  
+```
 ## Publishing RDF
-For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://sandbox.linkeddata.es/sparql, and the graph URI is http://sandbox.linkeddata.es/graph/mariela3.
+For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://spar.linkeddata.es/sparql, and the graph URI is http://spar.linkeddata.es/graph/ug.
 ## Quering with SPARQL
 The competency questions and the queries is presented in this section. You can click in the play button to execute the query.  
 ### CQ1.   What kind of publication it is? 
@@ -73,7 +89,7 @@ WHERE
 ?paper rdf:type fabio:Expression .   
 }  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Jz1AW1)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2zUFw3z)
 
 ### CQ2.    What other organizations was the publication made with? 
 ```
@@ -92,15 +108,15 @@ FILTER NOT EXISTS {?x foaf:name "Universidad de Guayaquil"}
 }   
 ORDER BY ?y   
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PyUruq)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OLQZYE)
 
 ### CQ3. What is the article's bibliographic metadata?
 ```
-prefix fabio:<http://purl.org/spar/fabio/>  
+prefix fabio:<http://purl.org/spar/fabio/>   
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
-
-SELECT DISTINCT ?x ?y ?z  
+  
+SELECT DISTINCT  ?x ?y ?z 
 WHERE 
 {  
    ?x ?y ?z .  
@@ -110,8 +126,8 @@ WHERE
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:Article.  
-	   {   
+	   ?y rdf:type fabio:Article. 
+             {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
 	       {  
@@ -121,49 +137,18 @@ WHERE
 	}     
     }   
 }  
+ORDER BY ?x 
+ 
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6KPaL)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2qPkz6g)
 
 ### CQ4. What is the conference paper’s bibliographic metadata?
 ```
-prefix fabio:<http://purl.org/spar/fabio/>  
-prefix dcterms: <http://purl.org/dc/terms/>  
-prefix frbr: <http://purl.org/vocab/frbr/core/> 
-prefix juso: <http://rdfs.co/juso/> 
-
-SELECT DISTINCT ?x ?y ?z  ?source  ?conferenceName  
-WHERE 
-{  
-   ?x ?y ?z .  
-   ?x rdf:type fabio:BibliographicMetaData .  
-   {  
-       SELECT DISTINCT ?x ?source ?conferenceName  
-       WHERE 
-       {  
-	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:ConferencePaper.  
-           ?y frbr:partOf ?source .  
-           ?source dcterms:title ?conferenceName . 
-	   {   
-	       SELECT DISTINCT ?org  
-	       WHERE  
-	       {  
-		   ?org foaf:name "Universidad de Guayaquil" .      
-	       }  
-	    }     
-	}     
-    }   
-}  
-```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AItsnL)
-
-### CQ5. What is the book’s bibliographic metadata?
-```
-prefix fabio:<http://purl.org/spar/fabio/>  
+prefix fabio:<http://purl.org/spar/fabio/>   
 prefix dcterms: <http://purl.org/dc/terms/>  
 prefix frbr: <http://purl.org/vocab/frbr/core/>  
-
-SELECT DISTINCT ?x ?y ?z  
+  
+SELECT DISTINCT  ?x ?y ?z 
 WHERE 
 {  
    ?x ?y ?z .  
@@ -173,8 +158,8 @@ WHERE
        WHERE 
        {  
 	   ?x frbr:realization ?y.  
-	   ?y rdf:type fabio:BookChapter.  
-	   {   
+	   ?y rdf:type fabio:ConferencePaper. 
+             {   
 	       SELECT DISTINCT ?org  
 	       WHERE  
 	       {  
@@ -184,8 +169,42 @@ WHERE
 	}     
     }   
 }  
+ORDER BY ?x 
+
+```
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2DDefHv)
+
+### CQ5. What is the book’s bibliographic metadata?
+```
+prefix fabio:<http://purl.org/spar/fabio/>   
+prefix dcterms: <http://purl.org/dc/terms/>  
+prefix frbr: <http://purl.org/vocab/frbr/core/>  
+  
+SELECT DISTINCT  ?x ?y ?z 
+WHERE 
+{  
+   ?x ?y ?z .  
+   ?x rdf:type fabio:BibliographicMetaData .  
+   {  
+       SELECT DISTINCT ?x  
+       WHERE 
+       {  
+	   ?x frbr:realization ?y.  
+	   ?y rdf:type fabio:BookChapter. 
+             {   
+	       SELECT DISTINCT ?org  
+	       WHERE  
+	       {  
+		   ?org foaf:name "Universidad de Guayaquil" .      
+	       }  
+	    }     
+	}     
+    }   
+}  
+ORDER BY ?x 
+
  ```
- [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2AJg3Me)
+ [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2TfSWjB)
  
  ### CQ6. How many books, articles and conference papers researches have published?
 ```
@@ -210,29 +229,27 @@ SELECT * WHERE
 }  
 
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2OijVYc)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2DFzUi2)
 
  ### CQ7. How many citations a researcher’s publication has received?
 ```
 prefix fabio:<http://purl.org/spar/fabio/>    
 prefix dcterms: <http://purl.org/dc/terms/>     
-prefix bido: <http://purl.org/spar/bido-core/>    
+prefix bido: <http://purl.org/spar/bido-core/> 
+prefix frbr: <http://purl.org/vocab/frbr/core/>    
   
-SELECT DISTINCT ?num ?titlePaper    
-WHERE {  
-?paper rdf:type fabio:Expression;  
-       dcterms:title ?titlePaper;  
+SELECT DISTINCT ?valueCitations  ?title   
+WHERE { 
+?paper rdf:type fabio:Expression ;  
        bido:holdsBibliometricDataInTime ?paperMeasure .  
-?paperMeasure bido:withBibliometricData ?paperNum .  
-?paperNum bido:hasMeasure ?kind ;  
-          bido:hasNumericValue ?num .                
-?org foaf:member ?author .  
-?org foaf:name "Universidad de Guayaquil" .  
-?author foaf:name ?authorName .  
-} 
-ORDER BY DESC(?num)
+?bibliometricMetaData frbr:realization ?paper ;  
+                      dcterms:title ?title .  
+?paperMeasure bido:withBibliometricData ?citations .  
+?citations bido:hasNumericValue ?valueCitations .  
+}   
+ORDER BY DESC(?valueCitations)  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P2B6lP)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2FlAlj5)
 
 ### CQ8.   For how long a researcher has published?  
 ```
@@ -256,9 +273,9 @@ bind( ?dateBeginning as ?start )
 bind( ?dateEnd as ?end )  
 bind( year(?end)-year(?start) as ?ProductionLifeYears)  
 }  
-ORDER BY DESC(?ProductionLifeYears)
+ORDER BY ?authorName
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2P6hME3)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Dn6Db0)
 
 ### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
 ```
@@ -282,8 +299,9 @@ WHERE
 ?org foaf:name "Universidad de Guayaquil" .  
 ?author foaf:name ?authorName .   
 }
+ORDER BY ?authorName  
 ```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2qwsKUB)
+[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2PWXnkC)
 
 
 [![DOI](https://zenodo.org/badge/155572685.svg)](https://zenodo.org/badge/latestdoi/155572685)  
