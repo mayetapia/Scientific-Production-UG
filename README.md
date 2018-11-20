@@ -234,7 +234,8 @@ SELECT * WHERE
  ### CQ7. How many citations a researcher’s publication has received?
 ```
 Not was possible to represent the follow-ing information: paper citation count
-
+ 
+```
 ### CQ8.   For how long a researcher has published?  
 ```
 prefix time: <http://www.w3.org/2006/time#>  
