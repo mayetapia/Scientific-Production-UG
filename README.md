@@ -233,23 +233,7 @@ SELECT * WHERE
 
  ### CQ7. How many citations a researcher’s publication has received?
 ```
-prefix fabio:<http://purl.org/spar/fabio/>    
-prefix dcterms: <http://purl.org/dc/terms/>     
-prefix bido: <http://purl.org/spar/bido-core/> 
-prefix frbr: <http://purl.org/vocab/frbr/core/>    
-  
-SELECT DISTINCT ?valueCitations  ?title   
-WHERE { 
-?paper rdf:type fabio:Expression ;  
-       bido:holdsBibliometricDataInTime ?paperMeasure .  
-?bibliometricMetaData frbr:realization ?paper ;  
-                      dcterms:title ?title .  
-?paperMeasure bido:withBibliometricData ?citations .  
-?citations bido:hasNumericValue ?valueCitations .  
-}   
-ORDER BY DESC(?valueCitations)  
-```
-[![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2FlAlj5)
+Not was possible to represent the follow-ing information: paper citation count
 
 ### CQ8.   For how long a researcher has published?  
 ```
@@ -279,7 +263,7 @@ ORDER BY ?authorName
 
 ### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
 ```
-Not resolved  
+Not was possible to represent the follow-ing information: area of study, quartile
 ```
 
 ### CQ10.  What is the h-index, number of citations and number of publications of a re-searcher?  
