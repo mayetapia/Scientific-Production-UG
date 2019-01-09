@@ -75,7 +75,7 @@ Once the mapping of the data finished, that is when the columns of the table wer
 For publishing the RDF, we employed the triple database [OpenLink Virtuoso](https://virtuoso.openlinksw.com/). The URI to access our endpoint to do any query to our data is http://spar.linkeddata.es/sparql, and the graph URI is http://spar.linkeddata.es/graph/ug.
 ## Quering with SPARQL
 The competency questions and the queries is presented in this section. You can click in the play button to execute the query.  
-### CQ1.   What kind of publication it is? 
+### CQ1.   What kind of publication is it? 
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
@@ -91,7 +91,7 @@ WHERE
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2zUFw3z)
 
-### CQ2.    What other organizations was the publication made with? 
+### CQ2.    With which other organizations the publication was made? 
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
@@ -206,7 +206,7 @@ ORDER BY ?x
  ```
  [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2TfSWjB)
  
- ### CQ6. How many books, articles and conference papers researches have published?
+ ### CQ6. How many articles, books and conference papers have the researchers published?
 ```
 prefix fabio:<http://purl.org/spar/fabio/>  
 prefix dcterms: <http://purl.org/dc/terms/>  
@@ -231,12 +231,12 @@ SELECT * WHERE
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2DFzUi2)
 
- ### CQ7. How many citations a researcher’s publication has received?
+ ### CQ7. How many citations have researchers’ publications received?
 ```
 Not was possible to represent the follow-ing information: paper citation count
  
 ```
-### CQ8.   For how long a researcher has published?  
+### CQ8.  How long has the researcher been publishing?  
 ```
 prefix time: <http://www.w3.org/2006/time#>  
 prefix tvc: <http://www.essepuntato.it/2012/04/tvc/>  
@@ -262,7 +262,7 @@ ORDER BY ?authorName
 ```
 [![play](https://user-images.githubusercontent.com/43136359/47848297-3959fb80-ddce-11e8-8124-4f86d53d4d2a.png)](https://bit.ly/2Dn6Db0)
 
-### CQ9. How many researchers have published in Q1 (Quartile 1) journals and in which area?  
+### CQ9. How many researchers have published in Qx (Qx = Quartile 1 or Quartile 2 or Quartile 3 or Quartile 4) journals and in which area?  
 ```
 Not was possible to represent the follow-ing information: area of study, quartile
 ```
